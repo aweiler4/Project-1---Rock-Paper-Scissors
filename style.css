@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:rgb(27, 34, 46);
+    font-family: monospace;
+}
+
+header {
+    background-color: blanchedalmond;
+    width: 50%;
+    text-align: center;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border: solid  12px white;
+}
+
+header > h1 {
+    color: black;
+    text-align: center;
+    font-size: 72px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.score-board {
+    margin: 20px auto;
+    color: white;
+    font-size: 54px;
+    width: 200px;
+    text-align: center;
+    padding: 20px 25px;
+    position: relative;
+}
+
+.scores {
+    background-color:rgb(172, 70, 121);
+    color: white;
+}
+
+#player-board {
+    position: absolute;
+    top: 30px;
+    left: -200px;
+}
+
+#cpu-board {
+    position: absolute;
+    top: 30px;
+    right: 200px;
+}
+
+.result {
+    font-size: 55px;
+    color: white;
+}
+
+result > p {
+    text-align: center;
+    font-weight: bold;
+}
