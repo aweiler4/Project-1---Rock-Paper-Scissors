@@ -1,68 +1,82 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color:rgb(27, 34, 46);
-    font-family: monospace;
+  background-color: rgb(180, 184, 190);
+  font-family: monospace;
 }
 
 header {
-    background-color: blanchedalmond;
-    width: 50%;
-    text-align: center;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    border: solid  12px white;
+  background-color:rgb(172, 70, 121);
+  padding: 20px;
 }
 
 header > h1 {
-    color: black;
-    text-align: center;
-    font-size: 72px;
+  color: white;
+  text-align: center;
+  font-size: 72px;
 }
 
 img {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
 }
 
-.score-board {
-    margin: 20px auto;
-    color: white;
-    font-size: 54px;
-    width: 200px;
-    text-align: center;
-    padding: 20px 25px;
+.scoreboardContainer {
+    display: flex;
+    height: 150px;
+    border: 3px solid white;
+    width: 80%;
+    margin: 30px auto;
+    font-size: 36px;
     position: relative;
+    justify-content: center;
 }
 
 .scores {
-    background-color:rgb(172, 70, 121);
-    color: white;
+  border: solid 4px black;
+  width: 20%;
+  text-align: center;
 }
 
 #player-board {
-    position: absolute;
-    top: 30px;
-    left: -200px;
+  margin-right: auto;
 }
 
 #cpu-board {
-    position: absolute;
-    top: 30px;
-    right: 200px;
+  margin-left: auto;
 }
 
-.result {
-    font-size: 55px;
-    color: white;
+.gameBoard {
+    height: 100%;
 }
 
-result > p {
-    text-align: center;
-    font-weight: bold;
+.options {
+margin: 0 auto;
+display: flex;
+justify-content: center;
+
+}
+
+.options > .choice {
+  justify-content: center;
+  
+}
+
+.choice {
+  display: inline-block;
+  border: solid 4px white;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 50px;
+  transition: all 0.7s ease;
+  bottom: 50px;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: darkgray;
 }
