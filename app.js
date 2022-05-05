@@ -7,6 +7,8 @@ const resultDiv = document.querySelector(".result")
 const rockDiv = document.getElementById("rock");
 const paperDiv = document.getElementById("paper");
 const scissorsDiv = document.getElementById("scissors");
+const newGameDiv = document.querySelector(".newGame");
+let gameOn = true;
 
 let playerName = prompt("Welcome to Rock Paper Scissors! What is your name?");
 
@@ -54,7 +56,17 @@ function draw(userChoice, computerChoice) {
 }
 
 
+
+
 function game(userChoice) {
+
+    if (playerScore === 10) {
+        gameOn = false;
+        document.querySelector(".result").innerHTML = `${playerName} wins!`
+    } else if (cpuScore === 10) {
+        gameOn = false;
+        document.querySelector(".result").innerHTML = `${playerName} loses. Try again`
+    }   else {
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice) {
         case "rs":
@@ -73,23 +85,68 @@ function game(userChoice) {
             draw(userChoice, computerChoice);
             break;
     }
+    }
     
 
 }
 
+
+function newGame() {
+
+    newGameDiv.addEventListener('click', function() {
+        
+    })
+
+}
+
+    // function gameOver(gameOn) {
+    //     if (gameOn) {main()} else {
+  
+    //     }
+    // }
+
 function main() {
 
-rockDiv.addEventListener('click', function() {
-    game("r");
-})
+  
+            
 
-paperDiv.addEventListener('click', function() {
-    game("p");
-})
 
-scissorsDiv.addEventListener('click', function() {
-    game("s");
-    })
-}
+            rockDiv.addEventListener('click', function() {
+                game("r");
+            })
+            
+            paperDiv.addEventListener('click', function() {
+                game("p");
+            })
+            
+            scissorsDiv.addEventListener('click', function() {
+                game("s");
+                })
+        }
+    
+// while (gameOn) {
+//     main();
+// }
+    // if (playerScore === 10) {
+    //     document.querySelector(".result").innerHTML = `${playerName} wins the game!`
+    //     return;
+    // } else if (cpuScore === 10) {
+    //     document.querySelector(".result").innerHTML = `${playerName} loses. Please try again.`
+    //     return;
+    // } else {
+
+// rockDiv.addEventListener('click', function() {
+//     game("r");
+// })
+
+// paperDiv.addEventListener('click', function() {
+//     game("p");
+// })
+
+// scissorsDiv.addEventListener('click', function() {
+//     game("s");
+//     })
+// }
+
 
 main();
