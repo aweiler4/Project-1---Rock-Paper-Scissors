@@ -149,3 +149,16 @@ justify-content: center;
     color: rgb(41, 35, 73);
     background-color: snow;
 }
+
+.newGame:hover {
+    color: snow;
+    background-color: rgb(41, 35, 73);
+    cursor: pointer;
+}
+
+.selections {
+    display: flex;
+    font-size: 24px;
+    color: snow;
+    justify-content: center;
+}

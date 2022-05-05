@@ -8,12 +8,15 @@ const rockDiv = document.getElementById("rock");
 const paperDiv = document.getElementById("paper");
 const scissorsDiv = document.getElementById("scissors");
 const newGameDiv = document.querySelector(".newGame");
+const selectionsDiv = document.querySelector(".selections");
 let gameOn = true;
 
 let playerName = prompt("Welcome to Rock Paper Scissors! What is your name?");
 
 if (playerName !== null) {
     document.getElementById('player-name').innerHTML = playerName;
+} else {
+    document.getElementById('player-name').innerHTML = 'Player 1';
 }
 
 
@@ -36,6 +39,7 @@ function win(userChoice, computerChoice) {
     resultDiv.innerHTML = `${letterToWord(userChoice)} beats ${letterToWord(computerChoice)}, you win!`;
     document.getElementById("player-board").classList.add('win-flash');
     setTimeout(function() {document.getElementById('player-board').classList.remove('win-flash')}, 500);
+    selectionsDiv.innerHTML = `${playerName} chooses ${letterToWord(userChoice)}. Computer chooses ${letterToWord(computerChoice)}`
 }
 
 function lose(userChoice, computerChoice) {
@@ -45,6 +49,7 @@ function lose(userChoice, computerChoice) {
     resultDiv.innerHTML = `${letterToWord(computerChoice)} beats ${letterToWord(userChoice)}, you lose.`
     document.getElementById("cpu-board").classList.add('lose-flash');
     setTimeout(function() {document.getElementById('cpu-board').classList.remove('lose-flash')}, 500);
+    selectionsDiv.innerHTML = `${playerName} chooses ${letterToWord(userChoice)}. Computer chooses ${letterToWord(computerChoice)}`
 }
 
 function draw(userChoice, computerChoice) {
@@ -53,6 +58,7 @@ function draw(userChoice, computerChoice) {
     resultDiv.innerHTML = `${letterToWord(computerChoice)} = ${letterToWord(userChoice)}, it's a draw.`
     document.querySelector(".scoreboardContainer").classList.add('draw-flash');
     setTimeout(function() {document.querySelector('.scoreboardContainer').classList.remove('draw-flash')}, 500);
+    selectionsDiv.innerHTML = `${playerName} chooses ${letterToWord(userChoice)}. Computer chooses ${letterToWord(computerChoice)}`
 }
 
 
@@ -84,20 +90,12 @@ function game(userChoice) {
         case "ss":
             draw(userChoice, computerChoice);
             break;
-    }
-    }
-    
 
+        }
+    }
 }
 
 
-function newGame() {
-
-    newGameDiv.addEventListener('click', function() {
-        
-    })
-
-}
 
     // function gameOver(gameOn) {
     //     if (gameOn) {main()} else {
@@ -106,9 +104,6 @@ function newGame() {
     // }
 
 function main() {
-
-  
-            
 
 
             rockDiv.addEventListener('click', function() {
@@ -147,6 +142,5 @@ function main() {
 //     game("s");
 //     })
 // }
-
 
 main();
