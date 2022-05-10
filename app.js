@@ -97,12 +97,6 @@ function game(userChoice) {
 
 
 
-    // function gameOver(gameOn) {
-    //     if (gameOn) {main()} else {
-  
-    //     }
-    // }
-
 function main() {
 
 
@@ -119,28 +113,4 @@ function main() {
                 })
         }
     
-// while (gameOn) {
-//     main();
-// }
-    // if (playerScore === 10) {
-    //     document.querySelector(".result").innerHTML = `${playerName} wins the game!`
-    //     return;
-    // } else if (cpuScore === 10) {
-    //     document.querySelector(".result").innerHTML = `${playerName} loses. Please try again.`
-    //     return;
-    // } else {
-
-// rockDiv.addEventListener('click', function() {
-//     game("r");
-// })
-
-// paperDiv.addEventListener('click', function() {
-//     game("p");
-// })
-
-// scissorsDiv.addEventListener('click', function() {
-//     game("s");
-//     })
-// }
-
 main();
